@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		9919D3E1278FBDCE00A39E38 /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9919D3E0278FBDCE00A39E38 /* ResultViewController.swift */; };
+		9919D3E32790917900A39E38 /* CalculatorBrain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9919D3E22790917900A39E38 /* CalculatorBrain.swift */; };
+		99E86FC92794C079001D175B /* BMI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99E86FC82794C079001D175B /* BMI.swift */; };
 		99FF01D42782767E00EAD5B4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99FF01D32782767E00EAD5B4 /* AppDelegate.swift */; };
 		99FF01D62782767E00EAD5B4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99FF01D52782767E00EAD5B4 /* SceneDelegate.swift */; };
 		99FF01D82782767E00EAD5B4 /* CalculateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99FF01D72782767E00EAD5B4 /* CalculateViewController.swift */; };
@@ -38,6 +40,8 @@
 
 /* Begin PBXFileReference section */
 		9919D3E0278FBDCE00A39E38 /* ResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
+		9919D3E22790917900A39E38 /* CalculatorBrain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorBrain.swift; sourceTree = "<group>"; };
+		99E86FC82794C079001D175B /* BMI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BMI.swift; sourceTree = "<group>"; };
 		99FF01D02782767E00EAD5B4 /* BMI Calculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "BMI Calculator.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		99FF01D32782767E00EAD5B4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		99FF01D52782767E00EAD5B4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -78,6 +82,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9919D3E42790917F00A39E38 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				9919D3E22790917900A39E38 /* CalculatorBrain.swift */,
+				99E86FC82794C079001D175B /* BMI.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		99FF01C72782767E00EAD5B4 = {
 			isa = PBXGroup;
 			children = (
@@ -101,6 +114,7 @@
 		99FF01D22782767E00EAD5B4 /* BMI Calculator */ = {
 			isa = PBXGroup;
 			children = (
+				9919D3E42790917F00A39E38 /* Model */,
 				99FF01D52782767E00EAD5B4 /* SceneDelegate.swift */,
 				99FF01D32782767E00EAD5B4 /* AppDelegate.swift */,
 				99FF0204278276ED00EAD5B4 /* Controller */,
@@ -280,6 +294,8 @@
 				99FF01D82782767E00EAD5B4 /* CalculateViewController.swift in Sources */,
 				99FF01D42782767E00EAD5B4 /* AppDelegate.swift in Sources */,
 				99FF01D62782767E00EAD5B4 /* SceneDelegate.swift in Sources */,
+				9919D3E32790917900A39E38 /* CalculatorBrain.swift in Sources */,
+				99E86FC92794C079001D175B /* BMI.swift in Sources */,
 				9919D3E1278FBDCE00A39E38 /* ResultViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

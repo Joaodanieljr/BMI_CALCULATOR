@@ -9,12 +9,12 @@ import UIKit
 
 class CalculateViewController: UIViewController {
 
+    var calculatorBrain = CalculatorBrain()
+    
     @IBOutlet weak var heightValue: UILabel!
     @IBOutlet weak var weightValue: UILabel!
     @IBOutlet weak var heightSliderValue: UISlider!
     @IBOutlet weak var weightSliderValue: UISlider!
-    
-    var bmiValue = "0.0"
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,8 +26,6 @@ class CalculateViewController: UIViewController {
     
     @IBAction func heightSliderChanged(_ sender: UISlider) {
         heightValue.text = String(format:"%.2f", sender.value) + "m"
-        
-        
     }
     
     @IBAction func weightSliderChanged(_ sender: UISlider) {
@@ -35,17 +33,17 @@ class CalculateViewController: UIViewController {
     }
     
     @IBAction func CalculatePressed(_ sender: UIButton) {
-        let bmi = weightSliderValue.value / pow(heightSliderValue.value, 2)
-        bmiValue = String(format:"%.1f", bmi)
+        calculatorBrain.calculateBMI(height: heightSliderValue.value, weight: weightSliderValue.value)
         self.performSegue(withIdentifier: "goToResult", sender: self)
-        
     }
     
  
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "goToResult" {
             let destinationVC = segue.destination as! ResultViewController
-            destinationVC.bmiValue = bmiValue
+            destinationVC.bmiValue = calculatorBrain.getBMIValue()
+            destinationVC.advice = calculatorBrain.getAdvice()
+            destinationVC.color = calculatorBrain.getColor()
         }
     }
     
